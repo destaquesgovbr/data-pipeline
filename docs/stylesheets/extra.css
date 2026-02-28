@@ -1,0 +1,18 @@
+/* Status badges para componentes */
+.md-typeset .status-badge {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: 0.25em;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.md-typeset .status-badge--realtime {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.md-typeset .status-badge--batch {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}

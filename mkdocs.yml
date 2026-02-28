@@ -1,0 +1,79 @@
+site_name: DGB Data Pipeline
+site_description: Documentação do pipeline de dados do DestaquesGovBr
+site_url: https://destaquesgovbr.github.io/data-pipeline/
+repo_url: https://github.com/destaquesgovbr/data-pipeline
+repo_name: destaquesgovbr/data-pipeline
+docs_dir: docs
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  language: pt-BR
+  icon:
+    logo: material/pipe
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - def_list
+
+nav:
+  - Home: index.md
+  - Arquitetura:
+    - Visão Geral: arquitetura/visao-geral.md
+    - Pipeline Real-Time: arquitetura/pipeline-realtime.md
+    - Pipeline Batch: arquitetura/pipeline-batch.md
+    - Dados e Armazenamento: arquitetura/dados-e-armazenamento.md
+  - Componentes:
+    - Scraper: componentes/scraper.md
+    - Enriquecimento LLM: componentes/enrichment.md
+    - Embeddings: componentes/embeddings.md
+    - Typesense Sync: componentes/typesense-sync.md
+    - Publicação HuggingFace: componentes/data-publishing.md
+    - Federação ActivityPub: componentes/federation.md
+  - Operações:
+    - Monitoramento: operacoes/monitoramento.md
+    - Troubleshooting: operacoes/troubleshooting.md
+    - Runbooks: operacoes/runbooks.md
+  - Desenvolvimento:
+    - Setup Local: desenvolvimento/setup-local.md
+    - Contribuindo: desenvolvimento/contribuindo.md
+    - Adicionando Componente: desenvolvimento/adicionando-componente.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/destaquesgovbr/data-pipeline
